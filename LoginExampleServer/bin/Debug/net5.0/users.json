@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 0,
+    "UserName": "Troels",
+    "Domain": "via.dk",
+    "City": "Horsens",
+    "BirthYear": 1986,
+    "Role": "Teacher",
+    "SecurityLevel": 5,
+    "Password": "123456"
+  },
+  {
+    "Id": 1,
+    "UserName": "Jakob",
+    "Domain": "hotmail.com",
+    "City": "Aarhus",
+    "BirthYear": 1998,
+    "Role": "Student",
+    "SecurityLevel": 3,
+    "Password": "123456"
+  },
+  {
+    "Id": 2,
+    "UserName": "Kasper",
+    "Domain": "via.com",
+    "City": "Vejle",
+    "BirthYear": 1973,
+    "Role": "Guest",
+    "SecurityLevel": 1,
+    "Password": "123456"
+  },
+  {
+    "Id": 3,
+    "UserName": "string",
+    "Domain": "string",
+    "City": "string",
+    "BirthYear": 0,
+    "Role": "string",
+    "SecurityLevel": 0,
+    "Password": "string"
+  }
+]

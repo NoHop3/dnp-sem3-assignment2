@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "GSXm0jRlQ2pw+mowPXeEeP7WJXFhpAL3sYfSnywD+elYlVVRztNPO32lhBbv0AuNyyE4bnuW9wPgVdfeHPhtaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bird\\RiderProjects\\Razor_intro_ex1\\LoginExampleServer\\LoginExampleServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bird\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\bird\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\bird\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\bird\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\bird\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\bird\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
