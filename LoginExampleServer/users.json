@@ -38,5 +38,35 @@
     "Role": "string",
     "SecurityLevel": 0,
     "Password": "string"
+  },
+  {
+    "Id": 4,
+    "UserName": "Stefan",
+    "Domain": "viauc@dk",
+    "City": "Horsens",
+    "BirthYear": 2000,
+    "Role": "Student",
+    "SecurityLevel": 3,
+    "Password": "12345"
+  },
+  {
+    "Id": 5,
+    "UserName": "Stef",
+    "Domain": "viauc@dk",
+    "City": "Horsens",
+    "BirthYear": 1999,
+    "Role": "Student",
+    "SecurityLevel": 4,
+    "Password": "123456"
+  },
+  {
+    "Id": 6,
+    "UserName": "Stefchp",
+    "Domain": "via@dk",
+    "City": "Vejle",
+    "BirthYear": 1900,
+    "Role": "Secretary",
+    "SecurityLevel": 2,
+    "Password": "12345"
   }
 ]

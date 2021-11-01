@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
@@ -16,12 +17,14 @@ public class Person {
     [NotNull]
     [JsonPropertyName("LastName")]
     public string LastName { get; set; }
-    [Required]
+
     [NotNull]
+    [DefaultValue("Black")]
     [JsonPropertyName("HairColor")]
     public string HairColor { get; set; }
-    [Required]
+
     [NotNull]
+    [DefaultValue("Blue")]
     [JsonPropertyName("EyeColor")]
     public string EyeColor { get; set; }
     [Required]
@@ -36,8 +39,9 @@ public class Person {
     [NotNull]
     [JsonPropertyName("Height")]
     public int Height { get; set; }
-    [Required]
+
     [NotNull]
+    [DefaultValue("M")]
     [JsonPropertyName("Sex")]
     public string Sex { get; set; }
 }

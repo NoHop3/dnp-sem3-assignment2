@@ -54,7 +54,7 @@ namespace LoginExampleServer.Data.Impl
 
         public async Task<IList<Adult>> GetAdultsAsync()
         {
-            List<Adult> temp = new List<Adult>(Adults);
+            List<Adult> temp = new List<Adult>(Adults).OrderBy(adult => adult.Id).ToList();
             return temp;
         }
 
@@ -66,7 +66,7 @@ namespace LoginExampleServer.Data.Impl
 
         public async Task<User> ValidateUserAsync(string userName, string password)
         {
-            User first = Users.FirstOrDefault(user => user.UserName.Equals(userName));
+            User first = Users.FirstOrDefault(user => user.UserName.Equals(userName) && user.Password.Equals(password));
             if (first == null)
             {
                 throw new Exception("User not found");

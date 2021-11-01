@@ -1,0 +1,84 @@
+﻿@page "/AddAdult"
+@attribute [Authorize(Policy = "MustBeLoggedIn")]
+@using LoginExample.Models
+@using LoginExample.Data
+
+@inject IAdultService _data
+@inject NavigationManager _navigationManager
+
+<h3>Add an adult</h3>
+
+<EditForm Model="@newAdult" OnValidSubmit="@AddNewUser">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">
+        First name:<br/>
+        <input type="text" @bind-value="newAdult.FirstName"/>
+    </div>
+    <div class="form-group">
+        Last name:<br/>
+        <input type="text" @bind-value="newAdult.LastName"/>
+    </div>
+    <div class="form-group">
+        Hair Color:<br/>
+        <select class="form-group" @bind-value="newAdult.HairColor" @bind-value:event="onchange" style="width: 150px  ">
+            <option>Choose</option>
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Blonde">Blonde</option>
+            <option value="Colourful">Colourful</option>
+            <option value="Gray">Gray</option>
+        </select>
+    </div>
+    <div class="form-group">
+        Eye Color:<br/>
+        <select class="form-group" @bind-value="newAdult.EyeColor" @bind-value:event="onchange" style="width: 150px">
+            <option>Choose</option>
+            <option value="Blue">Blue</option>
+            <option value="Hazelnut">Hazelnut</option>
+            <option value="Green">Green</option>
+            <option value="Colorful">Colourful</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        Age:<br/>
+        <input type="number" @bind-value="newAdult.Age"/>
+    </div>
+    <div class="form-group">
+        Weight:<br/>
+        <input type="number" @bind-value="newAdult.Weight"/>
+    </div>
+    <div class="form-group">
+        Height:<br/>
+        <input type="number" @bind-value="newAdult.Height"/>
+    </div>
+    <div class="form-group">
+        Gender:<br/>
+        <select class="form-group" @bind-value="newAdult.Sex" @bind-value:event="onchange" style="width: 150px">
+            <option>Choose</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+    </div>
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Add</button>
+    </p>
+</EditForm>
+
+@code {
+    private Adult newAdult = new Adult();
+
+    private async Task AddNewUser()
+    {
+        try
+        {
+            await _data.AddPersonAsync(newAdult);
+            _navigationManager.NavigateTo("/Adults");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
